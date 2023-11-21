@@ -20,7 +20,7 @@ public class DemoRestController {
 	
 	 @Autowired
 	 // We can use Primary annotation to the bean which we want to inject instead of Qualifier . At the end Qualifier has the higher priorit
-	public DemoRestController(@Qualifier("cricketCoach")Coach mycoach ){
+	public DemoRestController(@Qualifier("swimCoach")Coach mycoach ){
 
 		coach = mycoach;
 	}

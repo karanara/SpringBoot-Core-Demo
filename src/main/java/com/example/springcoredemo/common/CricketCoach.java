@@ -13,9 +13,10 @@ import org.springframework.context.annotation.Scope;
 //@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class CricketCoach implements Coach {
     
-	/*public CricketCoach() {
+	public CricketCoach() {
 		System.out.println("In Constructor:" +getClass().getSimpleName());
-	}*/
+	}
+	/* 
 	//Bean life cycle methods 
 	@PostConstruct
 	public void doInitMethod() {
@@ -24,7 +25,8 @@ public class CricketCoach implements Coach {
 	@PreDestroy
 	public void doExitMethod() {
 		System.out.println("In DoExitMethod:" +getClass().getSimpleName());
-	}
+	}*/
+
 	@Override
 	public String getDailyWorkOut() {
 		// TODO Auto-generated method stub
