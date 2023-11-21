@@ -15,9 +15,10 @@ public class DemoRestController {
 	private Coach coach;
 	
 	//constructor based injection 
-	//Qualifies which specific bean has to be injected
+	//Qualifier Qualifies which specific bean has to be injected
 	 @Autowired
-	public DemoRestController(@Qualifier("hockeyCoach")Coach mycoach){
+	 // We can use Primary annotation to the bean which we want to inject instead of Qualifier . At the end Qualifier has the higher priorit
+	public DemoRestController(Coach mycoach){
 		coach = mycoach;
 	}
 	/*
