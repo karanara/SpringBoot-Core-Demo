@@ -3,14 +3,14 @@ package com.example.springcoredemo.common;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
-@Lazy
+//@Lazy
 //@Primary
 @Component
 public class KabbaddiCoach implements Coach {
 
-	public KabbaddiCoach() {
+	/*public KabbaddiCoach() {
 		System.out.println("In Constructor:" +getClass().getSimpleName());
-	}
+	}*/
 	@Override
 	public String getDailyWorkOut() {
 		// TODO Auto-generated method stub

@@ -13,16 +13,18 @@ public class DemoRestController {
 	//@Autowired
 	//field based injection -not recommended
 	private Coach coach;
+	private Coach thecoach;
 	
 	//constructor based injection 
 	//Qualifier Qualifies which specific bean has to be injected
 	
 	 @Autowired
 	 // We can use Primary annotation to the bean which we want to inject instead of Qualifier . At the end Qualifier has the higher priorit
-	public DemoRestController(@Qualifier("cricketCoach")Coach mycoach){
+	public DemoRestController(@Qualifier("cricketCoach")Coach mycoach,@Qualifier("cricketCoach") Coach anothercoach ){
 			System.out.println("In Constructor:" +getClass().getSimpleName());
 
 		coach = mycoach;
+		thecoach = anothercoach;
 	}
 	/*
 	   setter based injection using set Method
@@ -45,5 +47,10 @@ public class DemoRestController {
 	public String getDailyWorkout() {
 		return coach.getDailyWorkOut();
 	}
+	@GetMapping("/check")
+	public String isCheck() {
+		return (coach==thecoach)? "singleton":"prototype";
+	}
 
 }
+    
