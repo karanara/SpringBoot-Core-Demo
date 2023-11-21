@@ -8,8 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoRestController {
 	//define private feild for the coach dependency
 	private Coach coach;
-	@Autowired
+	
+	/* constructor based injection 
+	 @Autowired
 	public DemoRestController(Coach mycoach){
+		coach = mycoach;
+	}*/
+	/*
+	   setter based injection using set Method
+	 */
+	@Autowired
+	public void setCoach(Coach mycoach) {
 		coach = mycoach;
 	}
 	/*
